@@ -10,15 +10,15 @@ def convert_base(num, to_base=10, from_base=10):
 
 
 # ДЕЛИТЕЛИ ЧИСЛА
-def de(n):
+def dividers(a):
     arr = []
-    for i in range(n - 1, 1, -1):
-        if n % i == 0:
+    for i in range(a - 1, 1, -1):
+        if a % i == 0:
             arr.append(i)
     return arr
 
 
-# УНИКАЛЬНЫЕ ЗНАЧЕНИЯ МАССИВА
+# ОСТАВЛЯЕТ УНИКАЛЬНЫЕ ЗНАЧЕНИЯ МАССИВА
 def unique(numbers):
     unique = []
     for number in numbers:
@@ -29,12 +29,10 @@ def unique(numbers):
 
 # ПРОСТЫЕ ЧИСЛА
 def is_prime(n):
-    if n == 0:
-        return True
     d = 2
-    while n % d != 0:
+    while d * d <= n and n % d != 0:
         d += 1
-    return d == n
+    return d * d > n
 
 
 # НЕЧЕТНЫЕ ЦИФРЫ ЧИСЛА
@@ -91,9 +89,11 @@ for question in range(0, 9 + 1):
 
 '''
 
-answers = []
-for i in range(173225, 217437 + 1):
-    for y in de(i):
-        if is_prime(y):
-            answers.append(y)
-print(answers)
+
+def prime_dividers(a):
+    arr = []
+    for i in range(a - 1, 1, -1):
+        if a % i == 0:
+            if is_prime(i):
+                arr.append(i)
+    return arr
