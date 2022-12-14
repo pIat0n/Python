@@ -1,3 +1,4 @@
+
 # СИСТЕМЫ СЧИСЛЕНИЯ
 def convert_base(num, from_base, to_base):
     n = int(str(num), from_base)
@@ -55,3 +56,12 @@ def even(a):
             even += 1
         a = a // 10
     return even
+
+
+# ФАКТОРИАЛ ЧИСЛА
+def factorial(num):
+    count = 2
+    for i in range(3, num + 1):
+        count *= i
+    return count
+
