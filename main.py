@@ -1,6 +1,6 @@
 # СИСТЕМЫ СЧИСЛЕНИЯ
-def convert_base(num, to_base=10, from_base=10):
-    n = int(num, from_base) if isinstance(num, str) else num
+def convert_base(num, from_base, to_base):
+    n = int(str(num), from_base)
     alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     res = ""
     while n > 0:
@@ -28,11 +28,11 @@ def unique(numbers):
 
 
 # ПРОСТЫЕ ЧИСЛА
-def is_prime(n):
+def is_prime(num):
     d = 2
-    while d * d <= n and n % d != 0:
+    while d * d <= num and num % d != 0:
         d += 1
-    return d * d > n
+    return d * d > num
 
 
 # НЕЧЕТНЫЕ ЦИФРЫ ЧИСЛА
