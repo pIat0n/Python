@@ -55,5 +55,3 @@ def even(a):
             even += 1
         a = a // 10
     return even
-
-print(dividers(8))
