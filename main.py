@@ -12,7 +12,7 @@ def convert_base(num, from_base, to_base):
 # ДЕЛИТЕЛИ ЧИСЛА
 def dividers(a):
     arr = []
-    for i in range(a - 1, 1, -1):
+    for i in range(2, a):
         if a % i == 0:
             arr.append(i)
     return arr
@@ -55,3 +55,5 @@ def even(a):
             even += 1
         a = a // 10
     return even
+
+print(dividers(8))
