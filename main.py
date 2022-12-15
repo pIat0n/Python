@@ -1,5 +1,4 @@
-
-# СИСТЕМЫ СЧИСЛЕНИЯ
+# СИСТЕМЫ СЧИСЛЕНИЯ(-36 до 36)
 def convert_base(num, from_base, to_base):
     n = int(str(num), from_base)
     alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -64,4 +63,3 @@ def factorial(num):
     for i in range(3, num + 1):
         count *= i
     return count
-
