@@ -11,6 +11,3 @@ for i in range(len(l) - 2):
             count += 1
             summa.append(l[i] + l[i + 1] + l[i + 2])
 print(count, max(summa))
-
-a = 3 * 125 ** 6 + 2 * 25 ** 9 + 5 ** 12 - 625
-print(convert_base(a, 10, 5))
