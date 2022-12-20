@@ -20,11 +20,11 @@ def dividers(num: int):
 
 # оставляет уникальные значения массива
 def unique(num: str):
-    unique = []
+    arr = []
     for number in num:
-        if number not in unique:
-            unique.append(number)
-    return unique
+        if number not in arr:
+            arr.append(number)
+    return arr
 
 
 # проверка на простату
