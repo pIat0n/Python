@@ -1,5 +1,5 @@
 # перевод систем счисления
-def convert_base(num: int, from_base: int, to_base: int):
+def convert_base(num, from_base, to_base):
     n = int(str(num), from_base)
     alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     res = ""
@@ -10,7 +10,7 @@ def convert_base(num: int, from_base: int, to_base: int):
 
 
 # делители числа
-def dividers(num: int):
+def dividers(num):
     arr = []
     for i in range(2, num):
         if num % i == 0:
@@ -19,7 +19,7 @@ def dividers(num: int):
 
 
 # уникальные значения строки
-def unique(num: str):
+def unique(num):
     arr = []
     for number in num:
         if number not in arr:
@@ -28,7 +28,7 @@ def unique(num: str):
 
 
 # проверка на простату
-def is_prime(num: int):
+def is_prime(num):
     d = 2
     while d * d <= num and num % d != 0:
         d += 1
@@ -36,7 +36,7 @@ def is_prime(num: int):
 
 
 # количество нечетных цифр числа
-def odd(num: int):
+def odd(num):
     answer = 0
     while num > 0:
         if num % 2 != 0:
@@ -46,7 +46,7 @@ def odd(num: int):
 
 
 # количество четных цифр числа
-def even(num: int):
+def even(num):
     answer = 0
     while num > 0:
         if num % 2 == 0:
@@ -56,5 +56,16 @@ def even(num: int):
 
 
 # сумма цифр числа
-def summa(num: str):
-    return sum(map(int, num))
+def summa(num):
+    return sum(map(int, str(num)))
+
+
+# сортировка пузыриком
+def sorting(array):
+    length = len(array)
+    for i in range(0, length):
+        for y in range(0, length - i - 1):
+            if array[y] > array[y + 1]:
+                temp = array[y]
+                array[y] = array[y + 1]
+                array[y + 1] = temp
