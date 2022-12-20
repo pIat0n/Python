@@ -1,4 +1,4 @@
-# СИСТЕМЫ СЧИСЛЕНИЯ(-36 до 36)
+# перевод систем счисления
 def convert_base(num, from_base, to_base):
     n = int(str(num), from_base)
     alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -9,7 +9,7 @@ def convert_base(num, from_base, to_base):
     return res[::-1]
 
 
-# ДЕЛИТЕЛИ ЧИСЛА
+# делители числа
 def dividers(a):
     arr = []
     for i in range(2, a):
@@ -18,7 +18,7 @@ def dividers(a):
     return arr
 
 
-# ОСТАВЛЯЕТ УНИКАЛЬНЫЕ ЗНАЧЕНИЯ МАССИВА
+# оставляет уникальные значения массива
 def unique(numbers):
     unique = []
     for number in numbers:
@@ -27,7 +27,7 @@ def unique(numbers):
     return unique
 
 
-# ПРОСТЫЕ ЧИСЛА
+# проверка на простату
 def is_prime(num):
     d = 2
     while d * d <= num and num % d != 0:
@@ -35,7 +35,7 @@ def is_prime(num):
     return d * d > num
 
 
-# НЕЧЕТНЫЕ ЦИФРЫ ЧИСЛА
+# нечетные цифры числа
 def odd(a):
     a = int(a)
     odd = 0
@@ -46,7 +46,7 @@ def odd(a):
     return odd
 
 
-# ЧЕТНЫЕ ЦИФРЫ ЧИСЛА
+# четные цифры числа
 def even(a):
     a = int(a)
     even = 0
@@ -55,26 +55,3 @@ def even(a):
             even += 1
         a = a // 10
     return even
-
-
-# ФАКТОРИАЛ ЧИСЛА
-def factorial(num):
-    count = 2
-    for i in range(3, num + 1):
-        count *= i
-    return count
-
-file = open("17-1.txt")
-l = [int(i) for i in file]
-count = 0
-summa = []
-srednee = sum(l) // len(l)
-for i in range(len(l) - 2):
-    if l[i] < srednee or l[i + 1] < srednee or l[i + 2] < srednee:
-        if str(l[i]).count("2") != 0 and str(l[i + 1]).count("2") != 0 or str(l[i]).count("2") != 0 and str(l[i + 2]).count("2") != 0 or str(l[i + 1]).count("2") != 0 and str(l[i + 2]).count("2") != 0:
-            count += 1
-            summa.append(l[i] + l[i + 1] + l[i + 2])
-print(count, max(summa))
-
-a = 3 * 125 ** 6 + 2 * 25 ** 9 + 5 ** 12 - 625
-print(convert_base(a, 10, 5))
