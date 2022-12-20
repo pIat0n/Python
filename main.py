@@ -14,16 +14,16 @@ def dividers(num: int):
     arr = []
     for i in range(2, num):
         if num % i == 0:
-            arr.append(i)
+            arr.append(int(i))
     return arr
 
 
-# оставляет уникальные значения массива
+# уникальные значения строки
 def unique(num: str):
     arr = []
     for number in num:
         if number not in arr:
-            arr.append(number)
+            arr.append(int(number))
     return arr
 
 
@@ -37,24 +37,24 @@ def is_prime(num: int):
 
 # количество нечетных цифр числа
 def odd(num: int):
-    odd = 0
+    answer = 0
     while num > 0:
         if num % 2 != 0:
-            odd += 1
+            answer += 1
         num = num // 10
-    return odd
+    return answer
 
 
 # количество четных цифр числа
 def even(num: int):
-    even = 0
+    answer = 0
     while num > 0:
         if num % 2 == 0:
-            even += 1
+            answer += 1
         num = num // 10
-    return even
+    return answer
 
 
 # сумма цифр числа
 def summa(num: str):
-    return sum(map(int, str(num)))
+    return sum(map(int, num))
