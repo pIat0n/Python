@@ -1,3 +1,7 @@
+import sys
+
+sys.set_int_max_str_digits(1000000)
+
 # перевод систем счисления
 def convert_base(num, from_base, to_base):
     n = int(str(num), from_base)
