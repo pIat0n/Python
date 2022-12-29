@@ -1,5 +1,3 @@
-from main import *
-
 file = open("17-1.txt")
 l = [int(i) for i in file]
 count = 0
