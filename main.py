@@ -57,7 +57,10 @@ def even(num):
 
 # сумма цифр числа
 def summa(num):
-    return sum(map(int, str(num)))
+    answer = []
+    for i in str(num):
+        answer.append(int(i))
+    return sum(answer)
 
 
 # сортировка пузыриком
